@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateProblems() {
+            const departmentProblems = {
+                Health: [
+                    "Insufficient hospital staff",
+                    "Shortage of medicines",
+                    "Poor sanitation in hospitals",
+                    "Delayed ambulance services",
+                    "Unhygienic hospital conditions",
+                    "Lack of vaccination facilities",
+                    "No doctors available",
+                    "Inadequate patient care",
+                    "Equipment malfunction",
+                    "Emergency response issues"
+                ],
+                Education: [
+                    "Lack of teachers",
+                    "Insufficient study materials",
+                    "Unsanitary school environment",
+                    "Inaccessible schools",
+                    "Non-functional libraries",
+                    "No drinking water facility",
+                    "Poor infrastructure",
+                    "Non-availability of toilets",
+                    "Delayed scholarships",
+                    "Mismanagement in curriculum",
+                    "Dropout issues"
+                ],
+                Irrigation: [
+                    "Broken water channels",
+                    "Irrigation scheduling problems",
+                    "Flooding issues",
+                    "Inefficient water distribution",
+                    "Unreliable irrigation technology",
+                    "Low water pressure",
+                    "Canal leakage",
+                    "Crop failure due to irrigation",
+                    "Outdated systems",
+                    "Shortage of irrigation resources"
+                ],
+                "Animal Husbandary": [
+                    "Shortage of veterinary services",
+                    "Livestock diseases",
+                    "Lack of vaccination for animals",
+                    "Mismanagement of animal shelters",
+                    "Illegal cattle trade",
+                    "Feed supply issues",
+                    "Drought impact on livestock",
+                    "No grazing fields available",
+                    "Lack of animal care professionals",
+                    "Issues with breeding programs"
+                ],
+                "PM Poshan Yojana(MDM)": [
+                    "Poor quality of food",
+                    "Delayed meal supply",
+                    "Unhygienic preparation conditions",
+                    "Insufficient food for students",
+                    "Menu not followed",
+                    "Irregular meal distribution",
+                    "Health concerns from meals",
+                    "Issues with distribution staff",
+                    "Transportation delays",
+                    "Low-quality kitchen equipment"
+                ],
+                "Geology and Mining Branch": [
+                    "Illegal mining activities",
+                    "Environmental degradation",
+                    "Mining-induced pollution",
+                    "Water contamination",
+                    "Lack of safety measures",
+                    "Overexploitation of resources",
+                    "Damage to local biodiversity",
+                    "Inadequate monitoring",
+                    "Violation of mining laws",
+                    "Land subsidence issues"
+                ],
+                AVKUDA: [
+                    "Illegal constructions",
+                    "Poor waste management",
+                    "Ineffective urban planning",
+                    "Road maintenance issues",
+                    "Traffic mismanagement",
+                    "Drainage system failure",
+                    "Unauthorized encroachments",
+                    "Electricity pole misplacement",
+                    "Inadequate green spaces",
+                    "Noise pollution management"
+                ],
+                "Disaster Management": [
+                    "Lack of disaster preparedness",
+                    "Delay in emergency response",
+                    "Inadequate disaster relief",
+                    "Poor evacuation planning",
+                    "No rehabilitation facilities",
+                    "Communication failure during disasters",
+                    "Lack of warning systems",
+                    "Inefficient rescue operations",
+                    "Shortage of rescue equipment",
+                    "Flood risk management problems"
+                ]
+            };
+
+            const departmentSelect = document.getElementById("department");
+            const problemSelect = document.getElementById("problem");
+
+            const selectedDepartment = departmentSelect.value;
+            const problems = departmentProblems[selectedDepartment] || [];
+
+            // Clear the current problem options
+            problemSelect.innerHTML = "";
+
+            // Add new problem options
+            problems.forEach(problem => {
+                const option = document.createElement("option");
+                option.value = problem;
+                option.textContent = problem;
+                problemSelect.appendChild(option);
+            });
+        }
+
+        // Initialize the problem dropdown to show health problems by default
+        document.addEventListener("DOMContentLoaded", () => {
+            updateProblems();
+        });
+    </script>
+</head>
+<body>
+    <form action="complaint_registration.php" method="POST">
+        <h2>Register Your Complaint</h2>
+
+        <label for="user_id">User_id:</label>
+        <input type="number" id="user_id" name="user_id" required>
+
+        <label for="department">Select Department:</label>
+        <select id="department" name="department" required onchange="updateProblems()">
+            <option value="Health">Health</option>
+            <option value="Education">Education</option>
+            <option value="Irrigation">Irrigation</option>
+            <option value="Animal Husbandary">Animal Husbandary</option>
+            <option value="PM Poshan Yojana(MDM)">PM Poshan Yojana(MDM)</option>
+            <option value="Geology and Mining Branch">Geology and Mining Branch</option>
+            <option value="AVKUDA">AVKUDA</option>
+            <option value="Disaster Management">Disaster Management</option>
+        </select>
+
+        <label for="problem">Select Problem:</label>
+        <select id="problem" name="problem" required>
+            <!-- Problem options will be dynamically updated based on the selected department -->
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea> 
+
+        <label for="remarks">Additional Remarks:</label>
+        <textarea id="remarks" name="remarks"></textarea>
+
+        <label for="ward">Ward Number:</label>
+        <select id="ward" name="ward" required>
+            <option value="67080">Anand (M) - Ward No.1</option>
+            <option value="67081">Anand (M) - Ward No.2</option>
+            <option value="67082">Anand (M) - Ward No.3</option>
+            <option value="67083">Anand (M) - Ward No.4</option>
+            <option value="67084">Anand (M) - Ward No.5</option>
+            <option value="67085">Anand (M) - Ward No.6</option>
+            <option value="67086">Anand (M) - Ward No.7</option>
+            <option value="67087">Anand (M) - Ward No.8</option>
+            <option value="67088">Anand (M) - Ward No.9</option>
+            <option value="67089">Anand (M) - Ward No.10</option>
+            <option value="67090">Anand (M) - Ward No.11</option>
+            <option value="67091">Anand (M) - Ward No.12</option>
+            <option value="67092">Anand (M) - Ward No.13</option>
+        </select>
+
+        <label for="document">Upload Document (Optional):</label>
+        <input type="file" id="document" name="document">
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+</body>
+</html>

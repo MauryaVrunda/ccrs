@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reopen Complaint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Re-Open Complaint Through Email</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile No</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="complaintNo">Complaint No / Token No</label>
+            <input type="text" id="complaintNo" name="complaintNo" required>
+
+            <div class="button-container">
+                <button type="submit">SEND EMAIL</button>
+                <button type="reset">RESET</button>
+            </div>
+        </form>
+    </div>
+    <div class="complaint-container">
+
+        <!-- Phone Complaint -->
+        <div class="complaint-box">
+            <h3 class="complaint-title"><img src="phoneicon.png" alt="Phone Icon"> Complaint Registration Through Phone</h3>
+            <p>Contact our dedicated call center by dialing <strong>***XXX</strong> from landline or mobile between 24/7 to raise a complaint. Municipality/Corporation assures seamless support.</p>
+        </div>
+
+        <!-- SMS Complaint -->
+        <div class="complaint-box">
+            <h3 class="complaint-title"><img src="smsicon.jpg" alt="SMS Icon"> Complaint Registration Through SMS</h3>
+            <p>Send text <strong>'CCRC NEW'</strong> to <strong>***XXX</strong>. A call center operator will contact you to take necessary details and register the complaint.</p>
+        </div>
+        
+        <!-- WhatsApp Complaint -->
+        <div class="complaint-box">
+            <h3 class="complaint-title"><img src="whatsappicon.jpg" alt="WhatsApp Icon"> Complaint Registration Through WhatsApp</h3>
+            <p>Send "Hi" on WhatsApp chatbot at <strong>+91 ********XX</strong>. The automated system will guide you through the complaint submission process.</p>
+        </div>
+
+    </div>
+</body>
+</html>

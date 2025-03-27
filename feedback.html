@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+<div class="image-wrapper">
+    <div class="image-container">
+        <img src="blue.jpeg" alt="Image 1">
+        <div class="image-text"><a href="citizenopinion.html">Citizen opinion</a></div>
+    </div>
+
+    <div class="image-container">
+        <img src="blue.jpeg" alt="Image 2">
+        <div class="image-text"><a href="complaintrating.html">Complaint Rating</a></div>
+    </div>
+</body>

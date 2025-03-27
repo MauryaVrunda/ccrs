@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Re-open Complaint</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Re-open Complaint Form</h1>
+        <form action="/reopen-complaint" method="POST">
+            <label for="complaintId">Complaint ID:</label>
+            <input type="text" id="complaintId" name="complaintId" required>
+
+            <label for="reason">Reason for Re-opening:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <label for="contactInfo">Contact Information:</label>
+            <input type="text" id="contactInfo" name="contactInfo" required>
+
+            <button type="submit">Re-open Complaint</button>
+        </form>
+    </div>
+</body>
+</html>

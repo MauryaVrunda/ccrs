@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomplaint Submission</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Recomplaint Form</h1>
+        <form action="register_recomplaint.php" method="POST">
+            
+            <label for="departmnet">Departmnet:</label>
+            <input type="text" id="department" name="department" placeholder="Enter department name" required>
+
+            <!-- Original Complaint ID -->
+            <label for="original_complaint_id">Original Complaint ID:</label>
+            <input type="text" id="original_complaint_id" name="original_complaint_id" placeholder="Enter Original Complaint ID" required>
+
+            <!-- Citizen Name -->
+            <label for="citizen_name">Your Name:</label>
+            <input type="text" id="citizen_name" name="citizen_name" placeholder="Enter Your Name" required>
+
+            <!-- Complaint Details -->
+            <label for="complaint_details">Details of Recomplaint:</label>
+            <textarea id="complaint_details" name="complaint_details" rows="5" placeholder="Provide details of your complaint..." required></textarea>
+
+            <button type="submit">Submit Recomplaint</button>
+        </form>
+    </div>
+</body>
+</html>

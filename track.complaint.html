@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>track.complaint</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div id="navbar"></div>
+<script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+<div class="image-wrapper">
+    <div class="image-container">
+        <img src="blue.jpeg" alt="Image 1">
+        <div class="image-text"><a href="onlinecomplainttrack.html">Track complaint through online</a></div>
+    </div>
+
+    <div class="image-container">
+        <img src="blue.jpeg" alt="Image 2">
+        <div class="image-text"><a href="complaint_trackbysms.html">Track complaint through SMS/Phone/Email/Whatsapp</a></div>
+    </div>
+</body>

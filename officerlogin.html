@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>officer login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>EMPLOYEE Login</h2>
+        <form action="emplogin.php" method="POST">
+            <label for="department">Select Department:</label>
+        <select id="department" name="department" required>
+            <option value="Health"> Health </option>
+            <option value="Education">Education</option>
+            <option value="Irrigation">Irrigation</option>
+            <option value="Animal Husbandary">Animal Husbandary</option>
+            <option value="PM Poshan Yojana(MDM)"> PM Poshan Yojana(MDM) </option>
+            <option value="Geology and Mining Branch">Geology and Mining Branch</option>
+            <option value="AVKUDA">AVKUDA</option>
+            <option value="Disaster Management">Disaster Management</option>
+        </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
+</body>
+</html>

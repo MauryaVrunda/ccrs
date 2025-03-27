@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="left">
+           
+            <span id="gov-text">Government of Gujarat</span>
+        </div>
+
+        <div class="right">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                <button onclick="performSearch()">🔍</button>
+            </div>
+
+            <!-- Language Switch -->
+            <div class="dropdown">
+                <button class="dropbtn" id="language-button">English ⬇</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('gu')">ગુજરાતી</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="top-navbar">
+        <div class="logo-left">
+            <img src="logoleft.jpeg" alt="Government Logo">
+        </div>
+        <div class="title">
+            <h2>આણંદ જિલ્લો</h2>
+            <h3>DISTRICT ANAND</h3>
+        </div>
+        <div class="logo-right">
+            <img src="logoright.jpeg" height="80px" width="120px" alt="Digital India Logo">
+        </div>
+    </nav>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">REGISTER COMPLAINT</a>
+                <ul class="dropdown-content">
+                    <li><a href="complaint_registration.html">ONLINE REGISTATION</a></li>
+                    <li><a href="complaint_registrationbysms.html">THROUGH SMS/WHATSAPP/EMAIL</a></li>
+                </ul>
+            </li>
+    
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">TRACK COMPLAINTS</a>
+                <ul class="dropdown-content">
+                    <li><a href="complaint_tracking.html">ONLINE TRACKING</a></li>
+                    <li><a href="complaint_trackbysms.html">THROUGH SMS/WHATSAPP/EMAI</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"><a href="recomplaint.html" class="dropbtn">RECOMPLAINT</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">FEEDBACK</a>
+                <ul class="dropdown-content">
+                    <li><a href="complaintrating.html">COMPLAINT RATING</a></li>
+                    <li><a href="citizenopinion.html">CITIZEN OPINION</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">SUPPORT</a>
+                <ul class="dropdown-content">
+                    <li><a href="About us.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="otp.html">FAQs</a></li>
+                </ul>
+            </li>
+            <li class="logindropdown">
+            <a href="#" class="loginbtn">LOGIN</a>
+            <ul class="login-content">
+                <li><a href="officerlogin.html">EMPLOYEE LOGIN</a></li>
+                <li><a href="citizenlogin.php">CITIZEN LOGIN</a></li>
+            </ul>
+            </li>
+            <li class="dwopdown">
+            <a href="chatbox.php" class="dropbtn">chatbox</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="gallery">
+        <img src="img2.jfif" >
+        <img src="img3.jfif" >
+        <img src="pic1.webp" >
+        <img src="pic4.jfif" >
+        <img src="pic5.jfif" >
+        <img src="img5.jfif" >
+        <img src="img6.jfif" >
+    </div>
+
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function () {
+    let links = document.querySelectorAll(".nav-links a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function () {
+            links.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
+    </script>
+    <main id="content">
+        <h1 id="welcome-text">Welcome to the Government Website</h1>
+        <p id="description-text">i am india.This is a government website providing official information.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
