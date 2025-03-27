@@ -1,4 +1,6 @@
 * {
+    width : 100% ;
+    display : block;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -157,6 +159,8 @@
 }
 
 .title {
+    display: flex;
+    flex-direction: column;
     margin-left: 10px; /* Reduce this value to move text closer */
     text-align: left;
 }
@@ -175,6 +179,8 @@
      
 }
 * {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -185,6 +191,7 @@ body {
 }
 
 .navbar {
+    width : 100% ;
     background: #ffffff;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
